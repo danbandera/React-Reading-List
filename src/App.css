@@ -3,7 +3,7 @@
   justify-content: center;
   height: 70px;
   position: relative;
-  box-shadow: 0px 2px 3px rgb(0,0,0,0.1);
+  box-shadow: 0px 2px 3px rgb(0, 0, 0, 0.1);
   padding: 0 20px;
 }
 
@@ -76,7 +76,10 @@
   padding: 0;
 }
 
-.search-bar .search-input, .genres, .authors, .years {
+.search-bar .search-input,
+.genres,
+.authors,
+.years {
   height: 40px;
   border: none;
   outline: none;
@@ -111,7 +114,7 @@
   border-radius: 0 5px 5px 0;
 }
 
-.search-bar button svg path{
+.search-bar button svg path {
   fill: #fff;
 }
 
@@ -221,7 +224,8 @@
   height: 100vh;
   background: #fff;
   overflow: scroll;
-  z-index: 101;;
+  z-index: 101;
+  ;
   transition: 0.5s;
 }
 
@@ -286,7 +290,7 @@
   width: 100%;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -298,8 +302,8 @@
 }
 
 .hidden {
-    opacity: 0;
-    z-index: -1;
+  opacity: 0;
+  z-index: -1;
 }
 
 .enter {
@@ -309,30 +313,31 @@
 
 @media (max-width: 1024px) {
   .container {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
+  }
 
-    .search-bar form {
-      width: 70%;
-    }
+  .search-bar form {
+    width: 70%;
+  }
 
-    .filters {
-      min-height: 150px;
-    }
+  .filters {
+    min-height: 150px;
+  }
 
-    .filters form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
+  .filters form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .filters h1 {
-      text-align: center;
-    }
+  .filters h1 {
+    text-align: center;
+  }
 
-    .filters .containerAuthors, .filters .containerGenres {
-      display: none;
-    }
+  .filters .containerAuthors,
+  .filters .containerGenres {
+    display: none;
+  }
 }
 
 @media (max-width: 834px) {
@@ -374,11 +379,12 @@
   .search-bar form {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "search search"
       "genres authors";
   }
-  .search-bar .search-input{
+
+  .search-bar .search-input {
     width: auto;
     border-radius: 5px;
     margin: 0 0 15px 0;
@@ -389,6 +395,7 @@
     width: 100%;
     grid-area: genres;
   }
+
   .search-bar .authors {
     width: 100%;
     grid-area: authors;
