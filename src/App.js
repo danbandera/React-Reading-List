@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Navbar from './components/Navbar'
+import Layout from './components/Layout'
+import SearchBar from './components/SearchBar'
+import Aside from './components/Aside'
+import Books from './components/Books'
+import ReadingList from './components/ReadingList'
+import Overlay from './components/Overlay'
+import { BooksContextProvider } from './context/BooksContext'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='mainContainer'>
+      <BooksContextProvider>
+        <Overlay />
+        <Navbar />
+        <SearchBar/>
+        <Layout >
+          <Aside />
+          <Books />
+        </Layout>
+        <ReadingList />
+      </BooksContextProvider>
     </div>
-  );
+  )
 }
 
 export default App;
